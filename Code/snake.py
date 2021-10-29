@@ -9,6 +9,8 @@ Exercises
 4. Change the snake to respond to arrow keys.
 
 """
+#Enrique Mondelli
+#Gerardo Gutierrez
 
 from turtle import *
 from random import randrange
@@ -49,7 +51,7 @@ def move():
     clear()
 
     for body in snake:
-        square(body.x, body.y, 9, 'black')
+        square(body.x, body.y, 9, 'purple') #color of snake purple
 
     square(food.x, food.y, 9, 'yellow') #food is yellow
     update()
