@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 """Snake, classic arcade game.
 
 Exercises
@@ -80,4 +80,3 @@ onkey(lambda: change(0, 10), 'Up')
 onkey(lambda: change(0, -10), 'Down')
 move()
 done()
->>>>>>> 0436681f1c6faea9d307e310149a3f20f9526f1a
