@@ -9,6 +9,8 @@ Exercises
 5. Make the ghosts smarter.
 
 """
+#Enrique Mondelli
+#Gerardo Gutierrez
 
 from random import choice
 from turtle import *
@@ -121,7 +123,7 @@ def move():
 
     up()
     goto(pacman.x + 10, pacman.y + 10)
-    dot(20, 'yellow')
+    dot(20, 'green') # pacman color green
 
     for point, course in ghosts:
         if valid(point + course):
@@ -162,10 +164,11 @@ writer.goto(160, 160)
 writer.color('white')
 writer.write(state['score'])
 listen()
-onkey(lambda: change(5, 0), 'Right')
-onkey(lambda: change(-5, 0), 'Left')
-onkey(lambda: change(0, 5), 'Up')
-onkey(lambda: change(0, -5), 'Down')
+#Keys inverted, left is right, right is left, up is down, and down is_up
+onkey(lambda: change(-5, 0), 'Right')
+onkey(lambda: change(5, 0), 'Left')
+onkey(lambda: change(0, -5), 'Up')
+onkey(lambda: change(0, 5), 'Down')
 world()
 move()
 done()
