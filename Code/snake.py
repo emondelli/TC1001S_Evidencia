@@ -31,7 +31,20 @@ def move():
     head = snake[-1].copy()
     head.move(aim)
 
-    if not inside(head) or head in snake:
+    if not inside(head): # if head outside of boundaries
+        if head.x < -200: # wrap head to right boundary when it hits left boundary
+            head.x = 190
+        
+        if head.x > 190: # wrap head to left boundary when it hits right boundary
+            head.x = -200
+        
+        if head.y < -200: # wrap head to top boundary when it hits bottom boundary
+            head.y = 190
+        
+        if head.y > 190: # wrap head to bottom boundary when it hits top boundary
+            head.y = -200
+
+    if head in snake:
         square(head.x, head.y, 9, 'red')
         update()
         return
