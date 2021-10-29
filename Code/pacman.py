@@ -149,7 +149,7 @@ def move():
         if abs(pacman - point) < 20:
             return
 
-    ontimer(move, 100)
+    ontimer(move, 80) # second argument changes speed (smaller = faster)
 
 def change(x, y):
     "Change pacman aim if valid."
